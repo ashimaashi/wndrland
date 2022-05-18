@@ -241,18 +241,19 @@
 						<img src="{% static 'image/nesltr-line.png' %}" class="subscribe-line-pc" alt="newsletter-line">
 						<img src="{% static 'image/subscribe-line-tabs.png' %}" class="subscribe-line-tabs" alt="newsletter-line1">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus enim ac aliquet facilisis. </p>
-						<form method="post">
+						<form method="post" id="news">
 							{% csrf_token %}
 							<span class="nesltr-btn">
 								<img src="{% static 'image/sucribe-input-img-center.png' %}" class="sucribe-center-pc" alt="subscribe-1">
 								<img src="{% static 'image/sucribe-input-img-tabs.png' %}" class="sucribe-center-tabs" alt="subscribe-2">
 								<img src="{% static 'image/sucribe-btn-center-img-mobile.png' %}" class="sucribe-center-pc-mobile" alt="subscribe-3">
-								<input type="email" name="email" value="" placeholder="Enter email" required>
+								<input type="email" id="myInput" name="email" value="" placeholder="Enter email"  required>
 							</span>
-							<div class="sbscribe-section">
-								<button class="sbt-btn">Submit</button>
-							</div>
+							
 						</form>	
+						<div class="sbscribe-section">
+							<button class="sbt-btn" onclick="myFunction()">Submit</button>
+						</div>
 					</div>
 				</div>
 			</div>
